@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+        <h1> Sistem Informasi Data
+            Mahasiswa - Praktikum 1 – Kelas A</h1>
+
+            <p> Selamat datang di Sistem Informasi Data Mahasiswa , Data akan ditampilkan di laman ini</p>
+            <img src="univ.png" alt="Logo Universitas" width="200" height="200">
+            
+        </header>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="#informasi">Informasi Aplikasi</a></li>
+                <li><a href="#daftar-mahasiswa">Daftar Mahasiswa</a></li>
+                <li><a href="#form-tambah">Tambah Mahasiswa Baru</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+        <main>
+            <section id="informasi"
+>
+                <h2>Informasi Sistem</h2>
+                <p>Aplikasi ini digunakan untuk mengelola data mahasiswa, termasuk menampilkan daftar mahasiswa dan menambahkan mahasiswa baru.</p>
+                <article>
+                    <h3>Fungsi Sistem</h3>
+                    <p>Sistem ini memiliki beberapa fungsi utama:</p>
+                    <ul>
+                        <li>Menampilkan daftar mahasiswa</li>
+                        <li>Menambahkan mahasiswa baru</li>
+                        <li>Mengedit data mahasiswa</li>
+                        <li>Menghapus data mahasiswa</li>
+                    </ul>
+
+                    <h3>Fitur Sistem</h3>
+                    <p>Beberapa fitur yang tersedia dalam sistem ini antara lain:
+                        <ul>
+                            <li>Formulir input data mahasiswa</li>
+                            <li>Tabel daftar mahasiswa</li>
+                            <li>Pencarian mahasiswa berdasarkan nama atau NIM</li>
+                            <li>Validasi data input untuk memastikan keakuratan informasi</li>
+                        </ul>
+                    </p>
+
+                    <h3>Tentang Kami</h3>
+                    <p>Kami adalah tim pengembang yang berkomitmen untuk menyediakan sistem informasi yang efisien dan mudah digunakan untuk pengelolaan data mahasiswa.</p>
+                </article>
+            </section>
+            <hr>
+            <section id="daftar-mahasiswa">
+                <h2>Daftar Mahasiswa Aktif</h2>
+                <p>Berikut adalah daftar mahasiswa yang terdaftar dalam sistem:</p>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Foto</th>
+                            <th>NPM</th>
+                            <th>Nama Lengkap</th>
+                            <th>Program Studi</th>
+                            <th>Angkatan</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="mahasiswa-list">
+                        <!-- Data mahasiswa akan ditampilkan di sini -->
+                         <tr>
+                            <td>1</td>
+                            <td><img src="pasfoto1.jpg" alt="Foto Mahasiswa 1" width="50" height="50"></td>
+                            <td>241506111</td>
+                            <td>Muhammad Rizki</td>
+                            <td>Teknik Informatika</td>
+                            <td>2020</td>
+                            <td>Rizkimuhammad@mail.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><img src="pasfoto2.jpg" alt="Foto Mahasiswa 2" width="50" height="50"></td>
+                            <td>241506112</td>
+                            <td>Ani Setiani</td>
+                            <td>Manajemen Informasi</td>
+                            <td>2020</td>
+                            <td>Anisetiani@mail.com</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td><img src="pasfoto3.jpg" alt="Foto Mahasiswa 3" width="50" height="50"></td>
+                            <td>241506113</td>
+                            <td>Budi Santoso</td>
+                            <td>Sistem Informasi</td>
+                            <td>2020</td>
+                            <td>Budisantoso@mail.com</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+
+            <hr>
+            <section id="form-tambah">
+                <h2>Tambah Mahasiswa Baru</h2>
+                <form action="#" method="post">
+                    <div>
+                        <label for="npm">NPM:</label>
+                        <br>
+                        <input type="text" id="npm" name="npm" placeholder="2315061118" required pattern="[0-9] {8,12}">
+                        <br> <small>Format NPM harus berupa angka dan memiliki panjang antara 8 hingga 12 digit.</small>
+                    </div>
+                    <div>
+                        <label for="nama">Nama Lengkap:</label>
+                        <br>
+                        <input type="text" id="nama" name="nama" placeholder="Dhika Aditya" required minlength="3" maxlength="100">
+                        <br> <small>Nama lengkap harus memiliki panjang antara 3 hingga 100 karakter.</small>
+                    </div>
+                    <div>
+                        <label for="prodi">Program Studi:</label>
+                        <br>
+                        <select id="prodi" name="prodi" required>
+                            <option value="">Pilih Program Studi</option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Manajemen Informasi">Manajemen Informasi</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                        </select>
+                        <br> <small>Silakan pilih salah satu program studi dari daftar.</small>
+                    </div>
+                    <div>
+                        <label for="angkatan">Angkatan:</label>
+                        <br>
+                        <input type="number" id="angkatan" name="angkatan" placeholder="2020" required min="2018" max="2026">
+                        <br> <small>Format angkatan harus berupa tahun.</small>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="dhika.aditya@example.com" required>
+                        <br> <small>Format email harus valid.</small>
+                    </div>
+                    <button type="submit">Simpan Data Mahasiswa</button>
+                    <button type="reset">Reset Formulir</button>
+                </form>
+            </section>
+        </main>
+</body>
+</html>
